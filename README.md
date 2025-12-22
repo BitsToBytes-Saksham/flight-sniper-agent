@@ -38,8 +38,6 @@ GOOGLE_MODEL=models/gemini-2.5-pro
 GOOGLE_FALLBACK_MODELS=models/gemini-2.5-flash,models/gemini-flash-lite-latest
 ```
 
-Do NOT commit your `.env` or API keys to source control.
-
 ## Streamlit demo
 
 Start the web UI:
@@ -84,11 +82,3 @@ If you get model errors (NOT_FOUND or RESOURCE_EXHAUSTED):
 - `flight_data.py` — fetches raw flight data from SerpApi
 - `flight_filter.py` — extracts direct flights and normalizes fields (price, link)
 - `streamlit_app.py` — Streamlit demo UI
-
-## Next steps / improvements
-
-- Add an offline CSV-based IATA/airport lookup for robust city->IATA mapping.
-- Improve deep-link generation for bookings if SerpApi returns booking tokens in a consistent format.
-- Add caching (Streamlit `st.cache_data`) to reduce repeated API calls during UI exploration.
-
-If you'd like, I can add the IATA lookup CSV and a confirmation dropdown so the UI never guesses wrong and always shows choices to the user.
